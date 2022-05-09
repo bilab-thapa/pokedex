@@ -3,12 +3,14 @@ class Pokemon {
   final String imgUrl;
   final String type;
   final int id;
+  final String desc;
 
   Pokemon({
     required this.name,
     required this.imgUrl,
     required this.type,
     required this.id,
+    required this.desc,
   });
 
   factory Pokemon.fromJson(Map<String, dynamic> json) {
@@ -17,6 +19,7 @@ class Pokemon {
       imgUrl: json['imgUrl'] ?? '',
       type: json['type'] ?? '',
       id: json['id'] ?? '',
+      desc: json['description'] ?? '',
     );
   }
 }
