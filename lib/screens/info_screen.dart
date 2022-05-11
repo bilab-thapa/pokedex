@@ -193,14 +193,14 @@ class _InfoScreenState extends State<InfoScreen> {
                         ),
                       ]),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 40, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(20, 40, 10, 0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
                           'Description',
                           style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 24,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
@@ -212,32 +212,88 @@ class _InfoScreenState extends State<InfoScreen> {
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
+                        const SizedBox(height: 20),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            const Text('Attack'),
-                            Text(attack.toString())
+                            const Text(
+                              'Attack',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                            const SizedBox(width: 97),
+                            Text(
+                              attack.toString() + ' Points',
+                              style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )
                           ],
                         ),
+                        const SizedBox(height: 10),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            const Text('Defence'),
-                            Text(defence.toString())
+                            const Text(
+                              'Defence',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                            const SizedBox(width: 85),
+                            Text(
+                              defence.toString() + ' Points',
+                              style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )
                           ],
                         ),
+                        const SizedBox(height: 10),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            const Text('Height'),
-                            Text(height.toString())
+                            const Text(
+                              'Height',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                            const SizedBox(width: 97),
+                            Text(
+                              height.toString(),
+                              style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )
                           ],
                         ),
+                        const SizedBox(height: 10),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            const Text('Weight'),
-                            Text(weight.toString() + 'Kg')
+                            const Text(
+                              'Weight',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                            const SizedBox(width: 95),
+                            Text(
+                              weight.toString() + ' Kg',
+                              style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )
                           ],
                         ),
                       ],

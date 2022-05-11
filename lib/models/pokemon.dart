@@ -31,7 +31,7 @@ class Pokemon {
       weight: json['weight'] ?? '',
       height: json['height'] ?? '',
       attack: json['attack'] ?? '',
-      defence: json['defence'] ?? '',
+      defence: json['defense'] ?? '',
     );
   }
 }
