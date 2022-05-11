@@ -42,8 +42,9 @@ class _DisplayScreenState extends State<DisplayScreen> {
                           searchController.clear();
                         },
                         focusNode: FocusNode(canRequestFocus: false),
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20)),
                           hintText: 'Search Pokemon',
                         ),
                       ),
@@ -93,9 +94,13 @@ class _DisplayScreenState extends State<DisplayScreen> {
                                               pokemon.id,
                                               pokemon.name,
                                               pokemon.type,
-                                              pokemon.desc
+                                              pokemon.desc,
+                                              pokemon.attack,
+                                              pokemon.defence,
+                                              pokemon.height,
+                                              pokemon.weight
                                             ],
-                                            transition: Transition.leftToRight);
+                                            transition: Transition.native);
                                       },
                                       child: Padding(
                                         padding: const EdgeInsets.symmetric(
@@ -105,7 +110,7 @@ class _DisplayScreenState extends State<DisplayScreen> {
                                             color: pokemon.type == 'grass'
                                                 ? Colors.green.shade300
                                                 : pokemon.type == 'fire'
-                                                    ? Colors.red.shade400
+                                                    ? Colors.red
                                                     : pokemon.type == 'water'
                                                         ? Colors.blue.shade300
                                                         : pokemon.type == 'bug'
@@ -119,23 +124,38 @@ class _DisplayScreenState extends State<DisplayScreen> {
                                                                     ? Colors
                                                                         .brown
                                                                     : pokemon.type ==
-                                                                            'Ground'
+                                                                            'ground'
                                                                         ? Colors
-                                                                            .grey
+                                                                            .brown
+                                                                            .shade300
                                                                         : pokemon.type ==
                                                                                 'normal'
                                                                             ? Colors.black26
                                                                             : pokemon.type == 'ghost'
                                                                                 ? Colors.indigo
                                                                                 : pokemon.type == 'electric'
-                                                                                    ? Colors.deepOrange
+                                                                                    ? Colors.amber
                                                                                     : pokemon.type == 'psychic'
                                                                                         ? Colors.purple
                                                                                         : pokemon.type == 'poison'
                                                                                             ? Colors.deepPurpleAccent
-                                                                                            : Colors.pink,
+                                                                                            : pokemon.type == 'fighting'
+                                                                                                ? Colors.indigo
+                                                                                                : pokemon.type == 'ice'
+                                                                                                    ? Colors.tealAccent
+                                                                                                    : Colors.pink,
                                             borderRadius:
                                                 BorderRadius.circular(20),
+                                            border:
+                                                Border.all(color: Colors.white),
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                color: Colors.grey,
+                                                offset:
+                                                    Offset(5.0, 6.0), //(x,y)
+                                                blurRadius: 2.0,
+                                              ),
+                                            ],
                                           ),
                                           child: Stack(
                                             children: [

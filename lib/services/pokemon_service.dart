@@ -29,7 +29,8 @@ class PokemonService {
       if ((response.data as List).isEmpty) {
         return [
           Pokemon(
-            name: 'Not Found', imgUrl: '', type: '', id: 0, desc: '',
+            name: 'Not Found', imgUrl: '', type: '', id: 0, desc: '', attack: 0,
+            defence: 0, height: 0, weight: 0,
             // desc: '',
           ),
         ];
